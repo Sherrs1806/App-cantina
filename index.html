@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+
+                <title>Cantina Admin</title>
+
+                <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Cantina Admin</h1>
+            <p>Sistema de administración</p>
+        </header>
+
+        <div class="contenedor">
+
+            <aside class="menu">
+                <h2>Sucursal</h2>
+
+                <select id="sucursal">
+                    <option value="Candiles">Candiles</option>
+                    <option value="Sendero">Sendero</option>
+                </select>
+
+                <h2>Menú</h2>
+
+                <button onclick="mostrarSeccion('resumen')">
+                    Resumen
+                </button>
+
+                <button onclick="mostrarSeccion('mesas')">
+                    Mesas
+                </button>
+
+                <button onclick="mostrarSeccion('ventas')">
+                    Ventas
+                </button>
+
+                <button onclick="mostrarSeccion('gastos')">
+                    Gastos
+                </button>
+
+                <button onclick="mostrarSeccion('caja')">
+                    Corte de caja
+                </button>
+
+                <button onclick="mostrarSeccion('empleados')">
+                    Empleados
+                </button>
+
+            </aside>
+
+            <main class="contenido">
+
+                <h2 id="tituloSeccion">Resumen</h2>
+
+                <p id="nombreSucursal">Sucursal: Candiles</p>
+
+                <div id="panel">
+                    <h3>Bienvenido al sistema</h3>
+                    <p>Selecciona una opcion del menú.</p>
+                </div>
+
+            </main>
+
+        </div>
+
+        <div id="modalFondo" class="ac-modal-fondo oculto">
+            <div class="ac-modal">
+                <div class="ac-modal-header">
+                    <h3 id="modalTitulo">Formulario</h3>
+                    <button id="modalCerrar"
+                        type="button"
+                        aria-label="Cerrar ventana">×</button>
+                </div>
+
+                <div id="modalCuerpo" class="ac-modal-cuerpo"></div>
+
+                <div class="ac-modal-footer">
+                    <button id="modalCancelar" type="button" class="ac-btn-secundario">
+                        Cancelar
+                    </button>
+                    <button id="modalGuardar" type="button" class="ac-btn-primario">
+                        Guardar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+
+    </body>
+
+</html>
